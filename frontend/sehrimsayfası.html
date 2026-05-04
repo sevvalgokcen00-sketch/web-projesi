@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Şehrim: Mardin - Şevval Gökçen</title>
-   
+    
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-amber-50 text-slate-800 font-sans">
 
     
-    <header class="bg-amber-700 text-white text-center py-10 shadow-lg border-b-4 border-amber-900">
-        <h1 class="text-4xl font-bold tracking-wider">Büyülü Şehir: MARDİN</h1>
-        <p class="text-xl mt-2 font-light">Taşın Şiire Dönüştüğü Yer</p>
+    <header class="bg-amber-700 text-white py-6 shadow-lg border-b-4 border-amber-900">
+        
+        <div class="max-w-5xl mx-auto px-4 w-full flex justify-center md:justify-end mb-6">
+            <nav>
+                <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 font-medium text-sm md:text-base">
+                    <li><a href="giris.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">Giriş</a></li>
+                    <li><a href="cv.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">CV</a></li>
+                    <li><a href="sehrimsayfası.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">Şehrim</a></li>
+                    <li><a href="kulturelmiras.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">Mirasımız</a></li>
+                    <li><a href="ilgi-alanlarim.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">İlgi Alanlarım</a></li>
+                    <li><a href="iletisim.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="text-center pb-4">
+            <h1 class="text-4xl font-bold tracking-wider">Büyülü Şehir: MARDİN</h1>
+            <p class="text-xl mt-2 font-light">Taşın Şiire Dönüştüğü Yer</p>
+        </div>
     </header>
 
     <main class="max-w-5xl mx-auto my-10 px-4">
@@ -29,7 +45,10 @@
                 </div>
             </div>
             <div class="flex-shrink-0">
-                <img src="resimler/mardin-genel.jpg" alt="Mardin Genel Görünüm" class="w-64 h-64 object-cover rounded-full shadow-lg border-4 border-amber-200">
+
+                <a href="resimler/mardin-genel.jpg" target="_blank" title="Resmi Büyütmek İçin Tıklayın">
+                    <img src="resimler/mardin-genel.jpg" alt="Mardin Genel Görünüm" class="w-64 h-64 object-cover rounded-full shadow-lg border-4 border-amber-200 hover:opacity-90 transition-opacity cursor-pointer">
+                </a>
             </div>
         </section>
 
@@ -37,7 +56,10 @@
             <h2 class="text-3xl font-bold text-center text-amber-800 mb-6">Mardin'den Manzaralar</h2>
             
             <div class="relative w-full max-w-3xl mx-auto h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white group">
-                <img id="sliderResim" src="resimler/mardin1.jpg" alt="Mardin Manzarası" class="w-full h-full object-cover transition-all duration-500">
+               
+                <a id="sliderLink" href="resimler/mardin1.jpg" target="_blank" title="Resmi Büyütmek İçin Tıklayın">
+                    <img id="sliderResim" src="resimler/mardin1.jpg" alt="Mardin Manzarası" class="w-full h-full object-cover transition-all duration-500 cursor-pointer">
+                </a>
                 
                 <button onclick="oncekiResim()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-4 rounded-r-xl transition opacity-0 group-hover:opacity-100">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
@@ -102,6 +124,7 @@
         let aktifSira = 0; 
         
         const sliderImg = document.getElementById("sliderResim");
+        const sliderLink = document.getElementById("sliderLink"); 
         const sayacMetni = document.getElementById("sayac");
 
      
@@ -126,6 +149,7 @@
 
         function resmiGuncelle() {
             sliderImg.src = resimler[aktifSira];
+            sliderLink.href = resimler[aktifSira]; 
             sayacMetni.innerText = aktifSira + 1; 
         }
     </script>
