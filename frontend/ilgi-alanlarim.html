@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanlarım - Şevval Gökçen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <header class="bg-indigo-600 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center">
+            
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <h1 class="text-3xl font-bold">Şevval Gökçen</h1>
+                <p class="text-sm mt-1 text-indigo-200">Kişisel Web Sayfası</p>
+            </div>
+
+            <nav>
+                <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 font-medium text-sm md:text-base">
+                    <li><a href="giris.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Giriş</a></li>
+                    <li><a href="cv.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">CV</a></li>
+                    <li><a href="sehrimsayfası.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Şehrim</a></li>
+                    <li><a href="kulturelmiras.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Mirasımız</a></li>
+                    <li><a href="ilgi-alanlarim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İlgi Alanlarım</a></li>
+                    <li><a href="iletisim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İletişim</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto my-10 px-4 space-y-12">
+        
+        <section>
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-indigo-800">Neler Yapmaktan Hoşlanırım?</h2>
+                <p class="text-gray-600 mt-2 text-lg">Boş zamanlarımı değerlendirmeyi sevdiğim başlıca aktiviteler.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎬</div>
+                    <h3 class="font-bold text-lg text-indigo-700">Dizi & Film</h3>
+                    <p class="text-sm text-gray-500 mt-2">Bilim kurgu ve teknoloji odaklı yapımları izlemeye bayılırım.</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🌍</div>
+                    <h3 class="font-bold text-lg text-indigo-700">Seyahat Etmek</h3>
+                    <p class="text-sm text-gray-500 mt-2">Yeni kültürler tanımak ve tarihi mekanları keşfetmek harika.</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 class="font-bold text-lg text-indigo-700">Kitap Okumak</h3>
+                    <p class="text-sm text-gray-500 mt-2">Özellikle kişisel gelişim ve fantastik romanlar favorimdir.</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🚶‍♀️</div>
+                    <h3 class="font-bold text-lg text-indigo-700">Yürüyüş Yapmak</h3>
+                    <p class="text-sm text-gray-500 mt-2">Doğayla iç içe uzun yürüyüşler zihnimi dinlendiriyor.</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🏺</div>
+                    <h3 class="font-bold text-lg text-indigo-700">Seramik Yapmak</h3>
+                    <p class="text-sm text-gray-500 mt-2">Çamurla uğraşmak ve kendi ellerimle yeni formlar yaratmak çok dinlendirici bir terapi gibi.</p>
+                </article>
+            </div>
+        </section>
+
+        <hr class="border-gray-200">
+
+        <section class="bg-white p-8 rounded-2xl shadow-md border-l-8 border-indigo-500 relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-9xl opacity-5 text-indigo-500 pointer-events-none">🍿</div>
+            
+            <h2 class="text-2xl font-bold text-indigo-800 mb-2">Dizi Film Keşif Aracı</h2>
+            <p class="text-gray-600 mb-6">TVMaze API'si kullanılarak global dizi veritabanından anlık veri çekilmektedir. İzleyecek dizi film arıyorsanız hemen test edin!</p>
+            
+            <div class="flex gap-3 mb-8">
+                <input type="text" id="diziAramaInput" placeholder="Örn: Mr Robot, Breaking Bad, Silicon Valley..." 
+                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent shadow-sm">
+                <button onclick="diziGetir()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors flex items-center gap-2">
+                    <span>Ara</span> 🔍
+                </button>
+            </div>
+
+            <div id="apiSonucKutusu" class="min-h-[200px] flex items-center justify-center border-2 border-dashed border-gray-200 rounded-xl p-4">
+                <p class="text-gray-400 italic">Dizi arama sonuçları burada listelenecektir...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6 mt-8">
+        <p>&copy; 2026 Şevval Gökçen - Web Teknolojileri Projesi</p>
+    </footer>
+
+    <script>
+        async function diziGetir() {
+            const aramaMetni = document.getElementById('diziAramaInput').value;
+            const sonucKutusu = document.getElementById('apiSonucKutusu');
+            
+            if(aramaMetni.trim() === '') {
+                sonucKutusu.innerHTML = '<p class="text-red-500 font-medium">Lütfen geçerli bir dizi adı girin.</p>';
+                return;
+            }
+
+            sonucKutusu.innerHTML = '<div class="animate-pulse text-indigo-500 font-bold text-lg">📡 TVMaze API\'sine bağlanılıyor, veriler çekiliyor...</div>';
+
+            try {
+                const response = await fetch(`https://api.tvmaze.com/search/shows?q=${aramaMetni}`);
+                const data = await response.json();
+
+                if(data.length === 0) {
+                    sonucKutusu.innerHTML = `<p class="text-gray-600">"${aramaMetni}" araması için sonuç bulunamadı.</p>`;
+                    return;
+                }
+
+                let html = '<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">';
+                
+                data.slice(0, 3).forEach(item => {
+                    const dizi = item.show;
+                    const resimUrl = dizi.image ? dizi.image.medium : 'https://via.placeholder.com/210x295?text=Resim+Yok';
+                    const puan = dizi.rating.average ? dizi.rating.average : 'Bilinmiyor';
+                    const tur = dizi.genres.length > 0 ? dizi.genres.join(', ') : 'Tür Belirtilmemiş';
+
+                    html += `
+                        <div class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
+                            <img src="${resimUrl}" alt="${dizi.name}" class="w-full h-64 object-cover">
+                            <div class="p-4 flex flex-col flex-1">
+                                <h3 class="font-bold text-xl text-indigo-900 mb-1">${dizi.name}</h3>
+                                <p class="text-xs text-gray-500 mb-2 font-medium">🏷️ ${tur}</p>
+                                <p class="text-sm text-gray-700 mb-4">⭐ IMDb Puanı: <span class="font-bold">${puan}</span></p>
+                                <a href="${dizi.url}" target="_blank" class="mt-auto bg-indigo-100 text-indigo-700 hover:bg-indigo-600 hover:text-white font-semibold py-2 px-4 rounded text-center transition-colors">
+                                    Detaylı Bilgi
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += '</div>';
+                sonucKutusu.innerHTML = html;
+
+            } catch (error) {
+                sonucKutusu.innerHTML = '<p class="text-red-500 font-bold">API ile iletişim kurulamadı. Lütfen internet bağlantınızı kontrol edin.</p>';
+            }
+        }
+
+        document.getElementById('diziAramaInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                diziGetir();
+            }
+        });
+    </script>
+
+</body>
+</html>
