@@ -8,9 +8,26 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-    <header class="bg-indigo-600 text-white text-center py-6 shadow-md">
-        <h1 class="text-3xl font-bold">Şevval Gökçen</h1>
-        <p class="text-lg mt-2">Kişisel Web Sayfası</p>
+    <header class="bg-indigo-600 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center">
+            
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <h1 class="text-3xl font-bold">Şevval Gökçen</h1>
+                <p class="text-sm mt-1 text-indigo-200">Kişisel Web Sayfası</p>
+            </div>
+
+            <nav>
+                <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 font-medium text-sm md:text-base">
+                    <li><a href="giris.html" class="hover:text-amber-400 transition duration-300 border-b-2 border-transparent hover:border-amber-400">Hakkımda</a></li>
+                    <li><a href="cv.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">CV</a></li>
+                    <li><a href="sehrimsayfası.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Şehrim</a></li>
+                    <li><a href="kulturelmiras.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Mirasımız</a></li>
+                    <li><a href="ilgi-alanlarim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İlgi Alanlarım</a></li>
+                    <li><a href="iletisim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İletişim</a></li>
+                </ul>
+            </nav>
+            
+        </div>
     </header>
 
     <main class="max-w-4xl mx-auto my-8 p-4">
@@ -21,16 +38,22 @@
             </div>
             <div>
                 <h2 class="text-2xl font-semibold mb-4 text-indigo-700">Hakkımda</h2>
-                <p class="mb-2 text-lg">Merhaba, ben <strong>Şevval Gökçen</strong>.</p>
-               <p class="mb-2 text-lg">Mardinliyim </p>  
-               <p class="mb-2 text-lg"><strong>Sakarya Üniversitesi Bilgisayar Mühendisliği 1. Sınıf</strong> öğrencisiyim.</p>
+                <p class="mb-3 text-lg leading-relaxed">
+                    Merhaba, ben <strong>Şevval Gökçen</strong>. <strong>Sakarya Üniversitesi Bilgisayar Mühendisliği 1. Sınıf</strong> öğrencisiyim.
+                </p>
+                <p class="mb-3 text-lg leading-relaxed text-gray-700">
+                    Kendimi geliştirmeyi, araştırmayı ve teknoloji dünyasında yeni şeyler deneyimlemeyi çok seviyorum. 
+                </p>
+                <p class="mb-2 text-lg leading-relaxed text-gray-700">
+                    Şu an incelediğiniz bu site, benim <strong>ilk web tasarım projem!</strong> Kodlamaya olan hevesimle sıfırdan hazırladığım bu sayfada, hem kendimi tanıtıyor hem de her yeni satır kodda yeni bir şeyler öğrenmenin mutluluğunu yaşıyorum.
+                </p>
             </div>
         </section>
 
         <section class="bg-white rounded-xl shadow-md p-6">
             <h2 class="text-2xl font-semibold mb-6 text-indigo-700 text-center">Hobilerim ve İlgi Alanlarım</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 <article class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                     <img src="resimler/yuruyus-foto.jpg" alt="Yürüyüş Yapmak" class="w-full h-40 object-cover bg-gray-200">
@@ -50,6 +73,13 @@
                     <img src="resimler/kesif-foto.jpg" alt="Yeni Yerler Keşfetmek" class="w-full h-40 object-cover bg-gray-200">
                     <div class="p-4 text-center">
                         <h3 class="font-medium text-lg">Yeni Yerler Keşfetmek</h3>
+                    </div>
+                </article>
+
+                <article class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <img src="resimler/film-dizi-foto.jpg" alt="Dizi ve Film İzlemek" class="w-full h-40 object-cover bg-gray-200">
+                    <div class="p-4 text-center">
+                        <h3 class="font-medium text-lg">Dizi ve Film İzlemek</h3>
                     </div>
                 </article>
 
