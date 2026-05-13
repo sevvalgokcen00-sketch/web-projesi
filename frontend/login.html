@@ -8,47 +8,52 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
-    <header class="bg-indigo-600 text-white shadow-md">
-        <div class="max-w-5xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-center md:text-left mb-4 md:mb-0">
-                <h1 class="text-2xl font-bold">Şevval Gökçen</h1>
+    <header class="bg-indigo-600 text-white shadow-md relative z-50">
+        <div class="max-w-5xl mx-auto px-4 py-5 flex flex-wrap justify-between items-center relative">
+            
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl font-bold">Şevval Gökçen</h1>
+                <p class="text-sm mt-1 text-indigo-200">Kişisel Web Sayfası</p>
             </div>
-            <nav>
-                <ul class="flex flex-wrap justify-center md:justify-end gap-4 font-medium text-sm md:text-base">
-                    <li><a href="giris.html" class="hover:text-indigo-300 transition">Hakkımda</a></li>
-                    <li><a href="cv.html" class="hover:text-indigo-300 transition">CV</a></li>
-                    <li><a href="sehrimsayfası.html" class="hover:text-indigo-300 transition">Şehrim</a></li>
-                    <li><a href="kulturelmiras.html" class="hover:text-indigo-300 transition">Mirasımız</a></li>
-                    <li><a href="ilgi-alanlarim.html" class="hover:text-indigo-300 transition">İlgi Alanlarım</a></li>
-                    <li><a href="iletisim.html" class="hover:text-indigo-300 transition">İletişim</a></li>
-                    <li><a href="login.html" class="hover:text-indigo-300 transition font-bold border-b-2 border-indigo-200">Giriş Yap</a></li>
+
+            <button id="menuButonu" class="md:hidden block text-white hover:text-indigo-200 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <nav id="anaMenu" class="hidden md:block absolute md:static top-full left-0 w-full md:w-auto bg-indigo-700 md:bg-transparent shadow-xl md:shadow-none pb-4 md:pb-0 z-50">
+                <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 font-medium text-sm md:text-base pt-4 md:pt-0">
+                    <li><a href="giris.html" class="hover:text-amber-400 transition duration-300 border-b-2 border-transparent hover:border-amber-400">Hakkımda</a></li>
+                    <li><a href="cv.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">CV</a></li>
+                    <li><a href="sehrimsayfası.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Şehrim</a></li>
+                    <li><a href="kulturelmiras.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Mirasımız</a></li>
+                    <li><a href="ilgi-alanlarim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İlgi Alanlarım</a></li>
+                    <li><a href="iletisim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İletişim</a></li>
+                    <li><a href="login.html" class="font-bold border-b-2 border-white pb-1">Giriş Yap</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="flex-grow flex items-center justify-center p-4">
-        <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full border-t-4 border-indigo-600">
-            <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-indigo-800">Öğrenci Girişi</h2>
-            </div>
-
+        <div class="bg-white p-8 rounded-xl shadow-xl max-w-md w-full border-t-4 border-indigo-600">
+            <h2 class="text-3xl font-bold text-indigo-800 text-center mb-8">Öğrenci Girişi</h2>
+            
             <div id="hataMesaji" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6">
                 <span class="block sm:inline">Bilgiler hatalı! Lütfen tekrar deneyin.</span>
             </div>
 
             <form action="login.php" method="POST" onsubmit="return jsKontrolYap()">
-                <div class="mb-5">
-                    <label class="block text-gray-700 font-bold mb-2">E-posta</label>
-                    <input type="text" id="email" name="email" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="b251210023@sakarya.edu.tr">
+                <div class="mb-4">
+                    <label class="block text-gray-700 font-bold mb-2">E-posta:</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="b251210023@sakarya.edu.tr">
                 </div>
-                <div class="mb-8">
-                    <label class="block text-gray-700 font-bold mb-2">Şifre</label>
-                    <input type="password" id="sifre" name="sifre" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="b251210023">
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">Şifre:</label>
+                    <input type="password" id="sifre" name="sifre" class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500" placeholder="Öğrenci Numaranız">
                 </div>
-                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg shadow-md transition-all">
-                    Giriş Yap
-                </button>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-lg shadow-md transition-all">Giriş Yap</button>
             </form>
         </div>
     </main>
@@ -58,6 +63,15 @@
     </footer>
 
     <script>
+        const menuButonu = document.getElementById('menuButonu');
+        const anaMenu = document.getElementById('anaMenu');
+
+        if(menuButonu && anaMenu) {
+            menuButonu.addEventListener('click', () => {
+                anaMenu.classList.toggle('hidden');
+            });
+        }
+
         if (new URLSearchParams(window.location.search).has('hata')) {
             document.getElementById('hataMesaji').classList.remove('hidden');
         }
@@ -69,12 +83,14 @@
 
             if (email === "" || sifre === "") {
                 alert("Alanlar boş bırakılamaz!");
-                return false; 
+                return false;
             }
+
             if (!emailFormat.test(email)) {
                 alert("E-posta formatı hatalı!");
-                return false; 
+                return false;
             }
+
             return true;
         }
     </script>

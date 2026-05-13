@@ -7,176 +7,199 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans p-6">
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
-    <header class="max-w-3xl mx-auto mb-8 flex justify-center md:justify-end">
-        <nav>
-            <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 font-medium text-sm md:text-base text-slate-600">
-                <li><a href="giris.html" class="hover:text-indigo-600 transition duration-300 border-b-2 border-transparent hover:border-indigo-600">Hakkımda</a></li>
-                <li><a href="cv.html" class="hover:text-indigo-600 transition duration-300 border-b-2 border-transparent hover:border-indigo-600">CV</a></li>
-                <li><a href="sehrimsayfası.html" class="hover:text-indigo-600 transition duration-300 border-b-2 border-transparent hover:border-indigo-600">Şehrim</a></li>
-                <li><a href="kulturelmiras.html" class="hover:text-indigo-600 transition duration-300 border-b-2 border-transparent hover:border-indigo-600">Mirasımız</a></li>
-                <li><a href="ilgi-alanlarim.html" class="hover:text-indigo-600 transition duration-300 border-b-2 border-transparent hover:border-indigo-600">İlgi Alanlarım</a></li>
-                <li><a href="iletisim.html" class="hover:text-indigo-600 transition duration-300 border-b-2 border-transparent hover:border-indigo-600">İletişim</a></li>
-                <li><a href="login.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Giriş Yap</a></li>
-            </ul>
-        </nav>
+    <header class="bg-indigo-600 text-white shadow-md relative z-50">
+        <div class="max-w-5xl mx-auto px-4 py-5 flex flex-wrap justify-between items-center">
+            
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl font-bold">Şevval Gökçen</h1>
+                <p class="text-sm mt-1 text-indigo-200">Kişisel Web Sayfası</p>
+            </div>
+
+            <button id="menuButonu" class="md:hidden block text-white hover:text-indigo-200 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <nav id="anaMenu" class="hidden md:block absolute md:static top-full left-0 w-full md:w-auto bg-indigo-700 md:bg-transparent shadow-lg md:shadow-none pb-4 md:pb-0">
+                <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 font-medium text-sm md:text-base pt-4 md:pt-0">
+                    <li><a href="giris.html" class="hover:text-amber-400 transition duration-300 border-b-2 border-transparent hover:border-amber-400">Hakkımda</a></li>
+                    <li><a href="cv.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">CV</a></li>
+                    <li><a href="sehrimsayfası.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Şehrim</a></li>
+                    <li><a href="kulturelmiras.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Mirasımız</a></li>
+                    <li><a href="ilgi-alanlarim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İlgi Alanlarım</a></li>
+                    <li><a href="iletisim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İletişim</a></li>
+                    <li><a href="login.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Giriş Yap</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md" id="app">
-        <h2 class="text-3xl font-bold text-indigo-600 mb-6 border-b pb-2">Benimle İletişime Geçin</h2>
+    <main class="flex-grow w-full px-4 py-10">
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md" id="app">
+            <h2 class="text-3xl font-bold text-indigo-600 mb-6 border-b pb-2">Benimle İletişime Geçin</h2>
 
-        <form action="../backend/islem.php" method="POST" id="iletisimFormu" ref="form">
-            
-            <div class="mb-4">
-                <label class="block font-medium mb-1">Adınız Soyadınız:</label>
-                <input type="text" name="ad_soyad" id="isim" ref="isim" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Örn: Şevval Gökçen">
-            </div>
-
-            <div class="mb-4">
-                <label class="block font-medium mb-1">E-mail Adresiniz:</label>
-                <input type="email" name="email" id="email" ref="email" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Örn: ornek@sakarya.edu.tr">
-            </div>
-
-
-            <div class="mb-4">
-                <label class="block font-medium mb-1">Telefon Numaranız (Sadece Rakam):</label>
-                <input type="text" name="telefon" id="telefon" ref="telefon" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Örn: 5551234567">
-            </div>
-
-            <div class="mb-4">
-                <label class="block font-medium mb-1">Yaşadığınız Şehir:</label>
-                <select name="sehir" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 max-h-48 overflow-y-auto">
-                    <option value="" disabled selected>Lütfen bir şehir seçiniz...</option>
-                    <option value="Adana">Adana</option>
-                    <option value="Adıyaman">Adıyaman</option>
-                    <option value="Afyonkarahisar">Afyonkarahisar</option>
-                    <option value="Ağrı">Ağrı</option>
-                    <option value="Aksaray">Aksaray</option>
-                    <option value="Amasya">Amasya</option>
-                    <option value="Ankara">Ankara</option>
-                    <option value="Antalya">Antalya</option>
-                    <option value="Ardahan">Ardahan</option>
-                    <option value="Artvin">Artvin</option>
-                    <option value="Aydın">Aydın</option>
-                    <option value="Balıkesir">Balıkesir</option>
-                    <option value="Bartın">Bartın</option>
-                    <option value="Batman">Batman</option>
-                    <option value="Bayburt">Bayburt</option>
-                    <option value="Bilecik">Bilecik</option>
-                    <option value="Bingöl">Bingöl</option>
-                    <option value="Bitlis">Bitlis</option>
-                    <option value="Bolu">Bolu</option>
-                    <option value="Burdur">Burdur</option>
-                    <option value="Bursa">Bursa</option>
-                    <option value="Çanakkale">Çanakkale</option>
-                    <option value="Çankırı">Çankırı</option>
-                    <option value="Çorum">Çorum</option>
-                    <option value="Denizli">Denizli</option>
-                    <option value="Diyarbakır">Diyarbakır</option>
-                    <option value="Düzce">Düzce</option>
-                    <option value="Edirne">Edirne</option>
-                    <option value="Elazığ">Elazığ</option>
-                    <option value="Erzincan">Erzincan</option>
-                    <option value="Erzurum">Erzurum</option>
-                    <option value="Eskişehir">Eskişehir</option>
-                    <option value="Gaziantep">Gaziantep</option>
-                    <option value="Giresun">Giresun</option>
-                    <option value="Gümüşhane">Gümüşhane</option>
-                    <option value="Hakkari">Hakkari</option>
-                    <option value="Hatay">Hatay</option>
-                    <option value="Iğdır">Iğdır</option>
-                    <option value="Isparta">Isparta</option>
-                    <option value="İstanbul">İstanbul</option>
-                    <option value="İzmir">İzmir</option>
-                    <option value="Kahramanmaraş">Kahramanmaraş</option>
-                    <option value="Karabük">Karabük</option>
-                    <option value="Karaman">Karaman</option>
-                    <option value="Kars">Kars</option>
-                    <option value="Kastamonu">Kastamonu</option>
-                    <option value="Kayseri">Kayseri</option>
-                    <option value="Kırıkkale">Kırıkkale</option>
-                    <option value="Kırklareli">Kırklareli</option>
-                    <option value="Kırşehir">Kırşehir</option>
-                    <option value="Kilis">Kilis</option>
-                    <option value="Kocaeli">Kocaeli</option>
-                    <option value="Konya">Konya</option>
-                    <option value="Kütahya">Kütahya</option>
-                    <option value="Malatya">Malatya</option>
-                    <option value="Manisa">Manisa</option>
-                    <option value="Mardin">Mardin</option>
-                    <option value="Mersin">Mersin</option>
-                    <option value="Muğla">Muğla</option>
-                    <option value="Muş">Muş</option>
-                    <option value="Nevşehir">Nevşehir</option>
-                    <option value="Niğde">Niğde</option>
-                    <option value="Ordu">Ordu</option>
-                    <option value="Osmaniye">Osmaniye</option>
-                    <option value="Rize">Rize</option>
-                    <option value="Sakarya">Sakarya</option>
-                    <option value="Samsun">Samsun</option>
-                    <option value="Siirt">Siirt</option>
-                    <option value="Sinop">Sinop</option>
-                    <option value="Sivas">Sivas</option>
-                    <option value="Şanlıurfa">Şanlıurfa</option>
-                    <option value="Şırnak">Şırnak</option>
-                    <option value="Tekirdağ">Tekirdağ</option>
-                    <option value="Tokat">Tokat</option>
-                    <option value="Trabzon">Trabzon</option>
-                    <option value="Tunceli">Tunceli</option>
-                    <option value="Uşak">Uşak</option>
-                    <option value="Van">Van</option>
-                    <option value="Yalova">Yalova</option>
-                    <option value="Yozgat">Yozgat</option>
-                    <option value="Zonguldak">Zonguldak</option>
-                </select>
-            </div>
-
-          
-            <div class="mb-4">
-                <label class="block font-medium mb-1">Cinsiyet:</label>
-                <div class="flex gap-4">
-                    <label><input type="radio" name="cinsiyet" value="Kadın" checked> Kadın</label>
-                    <label><input type="radio" name="cinsiyet" value="Erkek"> Erkek</label>
-                </div>
-            </div>
-
-
-            <div class="mb-4">
-                <label class="block font-medium mb-3">İlgi Alanlarınız:</label>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Yazılım" class="w-4 h-4 text-indigo-600"> Yazılım</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Dizi/Film" class="w-4 h-4 text-indigo-600"> Dizi / Film</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Seyahat" class="w-4 h-4 text-indigo-600"> Seyahat Etmek</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Kitap Okumak" class="w-4 h-4 text-indigo-600"> Kitap Okumak</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Doğa Yürüyüşü" class="w-4 h-4 text-indigo-600"> Doğa Yürüyüşü</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Seramik Yapmak" class="w-4 h-4 text-indigo-600"> Seramik Yapmak</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Spor" class="w-4 h-4 text-indigo-600"> Spor</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Müzik" class="w-4 h-4 text-indigo-600"> Müzik</label>
-                    <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Fotoğrafçılık" class="w-4 h-4 text-indigo-600"> Fotoğrafçılık</label>
-                </div>
-            </div>
-
-
-            <div class="mb-6">
-                <label class="block font-medium mb-1">Mesajınız:</label>
-                <textarea name="mesaj" id="mesaj" ref="mesaj" rows="4" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Mesajınızı buraya yazın..."></textarea>
-            </div>
-
-   
-            <div class="flex flex-col md:flex-row gap-4">
-                <button type="button" onclick="dogrulaNative()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded shadow-sm transition-colors">
-                    Native JS ile Gönder
-                </button>
+            <form action="../backend/islem.php" method="POST" id="iletisimFormu" ref="form">
                 
-                <button type="button" @click="dogrulaVue" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6 rounded shadow-sm transition-colors">
-                    Vue.js ile Gönder
-                </button>
-            </div>
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Adınız Soyadınız:</label>
+                    <input type="text" name="ad_soyad" id="isim" ref="isim" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Örn: Şevval Gökçen">
+                </div>
 
-        </form>
-    </div>
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">E-mail Adresiniz:</label>
+                    <input type="email" name="email" id="email" ref="email" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Örn: ornek@sakarya.edu.tr">
+                </div>
 
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Telefon Numaranız (Sadece Rakam):</label>
+                    <input type="text" name="telefon" id="telefon" ref="telefon" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Örn: 5551234567">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Yaşadığınız Şehir:</label>
+                    <select name="sehir" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 max-h-48 overflow-y-auto">
+                        <option value="" disabled selected>Lütfen bir şehir seçiniz...</option>
+                        <option value="Adana">Adana</option>
+                        <option value="Adıyaman">Adıyaman</option>
+                        <option value="Afyonkarahisar">Afyonkarahisar</option>
+                        <option value="Ağrı">Ağrı</option>
+                        <option value="Aksaray">Aksaray</option>
+                        <option value="Amasya">Amasya</option>
+                        <option value="Ankara">Ankara</option>
+                        <option value="Antalya">Antalya</option>
+                        <option value="Ardahan">Ardahan</option>
+                        <option value="Artvin">Artvin</option>
+                        <option value="Aydın">Aydın</option>
+                        <option value="Balıkesir">Balıkesir</option>
+                        <option value="Bartın">Bartın</option>
+                        <option value="Batman">Batman</option>
+                        <option value="Bayburt">Bayburt</option>
+                        <option value="Bilecik">Bilecik</option>
+                        <option value="Bingöl">Bingöl</option>
+                        <option value="Bitlis">Bitlis</option>
+                        <option value="Bolu">Bolu</option>
+                        <option value="Burdur">Burdur</option>
+                        <option value="Bursa">Bursa</option>
+                        <option value="Çanakkale">Çanakkale</option>
+                        <option value="Çankırı">Çankırı</option>
+                        <option value="Çorum">Çorum</option>
+                        <option value="Denizli">Denizli</option>
+                        <option value="Diyarbakır">Diyarbakır</option>
+                        <option value="Düzce">Düzce</option>
+                        <option value="Edirne">Edirne</option>
+                        <option value="Elazığ">Elazığ</option>
+                        <option value="Erzincan">Erzincan</option>
+                        <option value="Erzurum">Erzurum</option>
+                        <option value="Eskişehir">Eskişehir</option>
+                        <option value="Gaziantep">Gaziantep</option>
+                        <option value="Giresun">Giresun</option>
+                        <option value="Gümüşhane">Gümüşhane</option>
+                        <option value="Hakkari">Hakkari</option>
+                        <option value="Hatay">Hatay</option>
+                        <option value="Iğdır">Iğdır</option>
+                        <option value="Isparta">Isparta</option>
+                        <option value="İstanbul">İstanbul</option>
+                        <option value="İzmir">İzmir</option>
+                        <option value="Kahramanmaraş">Kahramanmaraş</option>
+                        <option value="Karabük">Karabük</option>
+                        <option value="Karaman">Karaman</option>
+                        <option value="Kars">Kars</option>
+                        <option value="Kastamonu">Kastamonu</option>
+                        <option value="Kayseri">Kayseri</option>
+                        <option value="Kırıkkale">Kırıkkale</option>
+                        <option value="Kırklareli">Kırklareli</option>
+                        <option value="Kırşehir">Kırşehir</option>
+                        <option value="Kilis">Kilis</option>
+                        <option value="Kocaeli">Kocaeli</option>
+                        <option value="Konya">Konya</option>
+                        <option value="Kütahya">Kütahya</option>
+                        <option value="Malatya">Malatya</option>
+                        <option value="Manisa">Manisa</option>
+                        <option value="Mardin">Mardin</option>
+                        <option value="Mersin">Mersin</option>
+                        <option value="Muğla">Muğla</option>
+                        <option value="Muş">Muş</option>
+                        <option value="Nevşehir">Nevşehir</option>
+                        <option value="Niğde">Niğde</option>
+                        <option value="Ordu">Ordu</option>
+                        <option value="Osmaniye">Osmaniye</option>
+                        <option value="Rize">Rize</option>
+                        <option value="Sakarya">Sakarya</option>
+                        <option value="Samsun">Samsun</option>
+                        <option value="Siirt">Siirt</option>
+                        <option value="Sinop">Sinop</option>
+                        <option value="Sivas">Sivas</option>
+                        <option value="Şanlıurfa">Şanlıurfa</option>
+                        <option value="Şırnak">Şırnak</option>
+                        <option value="Tekirdağ">Tekirdağ</option>
+                        <option value="Tokat">Tokat</option>
+                        <option value="Trabzon">Trabzon</option>
+                        <option value="Tunceli">Tunceli</option>
+                        <option value="Uşak">Uşak</option>
+                        <option value="Van">Van</option>
+                        <option value="Yalova">Yalova</option>
+                        <option value="Yozgat">Yozgat</option>
+                        <option value="Zonguldak">Zonguldak</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-1">Cinsiyet:</label>
+                    <div class="flex gap-4">
+                        <label><input type="radio" name="cinsiyet" value="Kadın" checked> Kadın</label>
+                        <label><input type="radio" name="cinsiyet" value="Erkek"> Erkek</label>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block font-medium mb-3">İlgi Alanlarınız:</label>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Yazılım" class="w-4 h-4 text-indigo-600"> Yazılım</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Dizi/Film" class="w-4 h-4 text-indigo-600"> Dizi / Film</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Seyahat" class="w-4 h-4 text-indigo-600"> Seyahat Etmek</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Kitap Okumak" class="w-4 h-4 text-indigo-600"> Kitap Okumak</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Doğa Yürüyüşü" class="w-4 h-4 text-indigo-600"> Doğa Yürüyüşü</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Seramik Yapmak" class="w-4 h-4 text-indigo-600"> Seramik Yapmak</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Spor" class="w-4 h-4 text-indigo-600"> Spor</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Müzik" class="w-4 h-4 text-indigo-600"> Müzik</label>
+                        <label class="flex items-center gap-2 cursor-pointer hover:text-indigo-600 transition"><input type="checkbox" name="hobiler[]" value="Fotoğrafçılık" class="w-4 h-4 text-indigo-600"> Fotoğrafçılık</label>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block font-medium mb-1">Mesajınız:</label>
+                    <textarea name="mesaj" id="mesaj" ref="mesaj" rows="4" class="w-full border p-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Mesajınızı buraya yazın..."></textarea>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-4">
+                    <button type="button" onclick="dogrulaNative()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded shadow-sm transition-colors">
+                        Native JS ile Gönder
+                    </button>
+                    
+                    <button type="button" @click="dogrulaVue" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-6 rounded shadow-sm transition-colors">
+                        Vue.js ile Gönder
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-auto">
+        <p>&copy; 2026 Şevval Gökçen.</p>
+    </footer>
+
+    <script>
+        const menuButonu = document.getElementById('menuButonu');
+        const anaMenu = document.getElementById('anaMenu');
+
+        menuButonu.addEventListener('click', () => {
+            anaMenu.classList.toggle('hidden');
+        });
+    </script>
 
     <script>
         function dogrulaNative() {
@@ -184,7 +207,6 @@
             const email = document.getElementById('email').value.trim();
             const telefon = document.getElementById('telefon').value.trim();
             const mesaj = document.getElementById('mesaj').value.trim();
-
 
             if (isim === "" || email === "" || telefon === "" || mesaj === "") {
                 alert("Native JS Uyarısı: Lütfen tüm alanları doldurunuz!");

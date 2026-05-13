@@ -6,31 +6,37 @@
     <title>İlgi Alanlarım - Şevval Gökçen</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
 
-    <header class="bg-indigo-600 text-white shadow-md">
-        <div class="max-w-5xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center">
+    <header class="bg-indigo-600 text-white shadow-md relative z-50">
+        <div class="max-w-5xl mx-auto px-4 py-5 flex flex-wrap justify-between items-center">
             
-            <div class="text-center md:text-left mb-4 md:mb-0">
+            <div class="text-center md:text-left">
                 <h1 class="text-3xl font-bold">Şevval Gökçen</h1>
                 <p class="text-sm mt-1 text-indigo-200">Kişisel Web Sayfası</p>
             </div>
 
-            <nav>
-                <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 font-medium text-sm md:text-base">
-                    <li><a href="giris.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Hakkımda</a></li>
+            <button id="menuButonu" class="md:hidden block text-white hover:text-indigo-200 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <nav id="anaMenu" class="hidden md:block absolute md:static top-full left-0 w-full md:w-auto bg-indigo-700 md:bg-transparent shadow-lg md:shadow-none pb-4 md:pb-0 z-50">
+                <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 font-medium text-sm md:text-base pt-4 md:pt-0">
+                    <li><a href="giris.html" class="hover:text-amber-400 transition duration-300 border-b-2 border-transparent hover:border-amber-400">Hakkımda</a></li>
                     <li><a href="cv.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">CV</a></li>
                     <li><a href="sehrimsayfası.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Şehrim</a></li>
                     <li><a href="kulturelmiras.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Mirasımız</a></li>
-                    <li><a href="ilgi-alanlarim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İlgi Alanlarım</a></li>
+                    <li><a href="ilgi-alanlarim.html" class="font-bold border-b-2 border-white pb-1">İlgi Alanlarım</a></li>
                     <li><a href="iletisim.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">İletişim</a></li>
+                    <li><a href="login.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Giriş Yap</a></li>
                 </ul>
             </nav>
-            
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto my-10 px-4 space-y-12">
+    <main class="max-w-6xl mx-auto my-12 px-4 flex-grow space-y-16">
         
         <section>
             <div class="text-center mb-8">
@@ -39,123 +45,150 @@
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                <article class="bg-white rounded-xl shadow-sm p-5 border border-gray-100 text-center hover:shadow-lg transition-all group">
                     <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🎬</div>
-                    <h3 class="font-bold text-lg text-indigo-700">Dizi & Film</h3>
+                    <h3 class="font-bold text-lg text-indigo-700">Dizi & Film İzlemek</h3>
                     <p class="text-sm text-gray-500 mt-2">Bilim kurgu ve teknoloji odaklı yapımları izlemeye bayılırım.</p>
                 </article>
 
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
-                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🌍</div>
-                    <h3 class="font-bold text-lg text-indigo-700">Seyahat Etmek</h3>
-                    <p class="text-sm text-gray-500 mt-2">Yeni kültürler tanımak ve tarihi mekanları keşfetmek harika.</p>
-                </article>
-
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
-                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
-                    <h3 class="font-bold text-lg text-indigo-700">Kitap Okumak</h3>
-                    <p class="text-sm text-gray-500 mt-2">Özellikle kişisel gelişim ve fantastik romanlar favorimdir.</p>
-                </article>
-
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                <article class="bg-white rounded-xl shadow-sm p-5 border border-gray-100 text-center hover:shadow-lg transition-all group">
                     <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🚶‍♀️</div>
                     <h3 class="font-bold text-lg text-indigo-700">Yürüyüş Yapmak</h3>
                     <p class="text-sm text-gray-500 mt-2">Doğayla iç içe uzun yürüyüşler zihnimi dinlendiriyor.</p>
                 </article>
 
-                <article class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all p-5 border border-gray-100 text-center group">
+                <article class="bg-white rounded-xl shadow-sm p-5 border border-gray-100 text-center hover:shadow-lg transition-all group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🌍</div>
+                    <h3 class="font-bold text-lg text-indigo-700">Seyahat Etmek</h3>
+                    <p class="text-sm text-gray-500 mt-2">Yeni kültürler tanımak ve tarihi mekanları keşfetmek harika.</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-sm p-5 border border-gray-100 text-center hover:shadow-lg transition-all group">
+                    <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">📚</div>
+                    <h3 class="font-bold text-lg text-indigo-700">Kitap Okumak</h3>
+                    <p class="text-sm text-gray-500 mt-2">Özellikle kişisel gelişim ve fantastik romanlar favorimdir.</p>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-sm p-5 border border-gray-100 text-center hover:shadow-lg transition-all group">
                     <div class="text-4xl mb-3 group-hover:scale-110 transition-transform">🏺</div>
                     <h3 class="font-bold text-lg text-indigo-700">Seramik Yapmak</h3>
-                    <p class="text-sm text-gray-500 mt-2">Çamurla uğraşmak ve kendi ellerimle yeni formlar yaratmak çok dinlendirici bir terapi gibi.</p>
+                    <p class="text-sm text-gray-500 mt-2">Çamurla uğraşmak çok dinlendirici bir terapi gibi.</p>
                 </article>
             </div>
         </section>
 
         <hr class="border-gray-200">
 
-        <section class="bg-white p-8 rounded-2xl shadow-md border-l-8 border-indigo-500 relative overflow-hidden">
-            <div class="absolute -right-10 -top-10 text-9xl opacity-5 text-indigo-500 pointer-events-none">🍿</div>
-            
-            <h2 class="text-2xl font-bold text-indigo-800 mb-2">Dizi Film Keşif Aracı</h2>
-            <p class="text-gray-600 mb-6">TVMaze API'si kullanılarak global dizi veritabanından anlık veri çekilmektedir. İzleyecek dizi film arıyorsanız hemen test edin!</p>
-            
-            <div class="flex gap-3 mb-8">
-                <input type="text" id="diziAramaInput" placeholder="Örn: Mr Robot, Breaking Bad, Silicon Valley..." 
-                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent shadow-sm">
-                <button onclick="diziGetir()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors flex items-center gap-2">
-                    <span>Ara</span> 🔍
-                </button>
-            </div>
+        <section class="text-center">
+            <h2 class="text-4xl font-extrabold text-indigo-900 mb-4 tracking-tight">Favori Dizi & Film Koleksiyonum</h2>
+            <div class="w-24 h-1 bg-indigo-500 mx-auto rounded-full mb-4"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg italic mb-12">
+                The Movie Database (TMDB) API kullanılarak anlık olarak hazırlanan kişisel favori listem. 
+                <br><span class="text-sm font-semibold text-indigo-500">(Detaylar için afişlere tıklayabilirsiniz)</span>
+            </p>
 
-            <div id="apiSonucKutusu" class="min-h-[200px] flex items-center justify-center border-2 border-dashed border-gray-200 rounded-xl p-4">
-                <p class="text-gray-400 italic">Dizi arama sonuçları burada listelenecektir...</p>
+            <div id="favoriListesi" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 min-h-[300px]">
+                <div class="col-span-full flex flex-col items-center justify-center py-16">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-indigo-600 mb-4"></div>
+                    <p class="text-indigo-600 font-bold text-lg animate-pulse">LİSTE GÜNCELLENİYOR...</p>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-gray-800 text-white text-center py-6 mt-8">
-        <p>&copy; 2026 Şevval Gökçen - Web Teknolojileri Projesi</p>
+    <footer class="bg-gray-900 text-white text-center py-6">
+        <p class="text-indigo-400 font-bold mb-1">Sakarya Üniversitesi - Bilgisayar Mühendisliği</p>
+        <p class="text-sm opacity-60">&copy; 2026 Şevval Gökçen - Web Teknolojileri Projesi</p>
     </footer>
 
     <script>
-        async function diziGetir() {
-            const aramaMetni = document.getElementById('diziAramaInput').value;
-            const sonucKutusu = document.getElementById('apiSonucKutusu');
+        const menuButonu = document.getElementById('menuButonu');
+        const anaMenu = document.getElementById('anaMenu');
+
+        if(menuButonu && anaMenu) {
+            menuButonu.addEventListener('click', () => {
+                anaMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+    <script>
+        const TMDB_API_KEY = '8159ea1d320d3f0e81bd6db5d2fa7110'; 
+
+        const favoriler = [
+            { id: 120,    tip: 'movie', etiket: 'Film' },
+            { id: 121,    tip: 'movie', etiket: 'Film' },
+            { id: 122,    tip: 'movie', etiket: 'Film' },
+            { id: 157336, tip: 'movie', etiket: 'Film' },
+            { id: 438631, tip: 'movie', etiket: 'Film' },
+            { id: 44214,  tip: 'movie', etiket: 'Film' },
+            { id: 1621,   tip: 'tv',    etiket: 'Dizi' },
+            { id: 1421,   tip: 'tv',    etiket: 'Dizi' },
+            { id: 66573,  tip: 'tv',    etiket: 'Dizi' },
+            { id: 1399,   tip: 'tv',    etiket: 'Dizi' } 
+        ];
+
+        async function listeyiOlustur() {
+            const container = document.getElementById('favoriListesi');
             
-            if(aramaMetni.trim() === '') {
-                sonucKutusu.innerHTML = '<p class="text-red-500 font-medium">Lütfen geçerli bir dizi adı girin.</p>';
+            if (TMDB_API_KEY === 'BURAYA_KENDİ_ŞİFRENİ_YAPIŞTIR' || TMDB_API_KEY === '') {
+                container.innerHTML = `<div class="col-span-full bg-red-100 text-red-700 p-6 rounded-xl border border-red-300 text-center font-bold">
+                    HATA: API Şifresi eksik! Lütfen kodun en altındaki TMDB_API_KEY kısmına şifrenizi girin.
+                </div>`;
                 return;
             }
 
-            sonucKutusu.innerHTML = '<div class="animate-pulse text-indigo-500 font-bold text-lg">📡 TVMaze API\'sine bağlanılıyor, veriler çekiliyor...</div>';
-
             try {
-                const response = await fetch(`https://api.tvmaze.com/search/shows?q=${aramaMetni}`);
-                const data = await response.json();
+                let htmlContent = '';
 
-                if(data.length === 0) {
-                    sonucKutusu.innerHTML = `<p class="text-gray-600">"${aramaMetni}" araması için sonuç bulunamadı.</p>`;
-                    return;
+                for (const yapim of favoriler) {
+                    const response = await fetch(`https://api.themoviedb.org/3/${yapim.tip}/${yapim.id}?api_key=${TMDB_API_KEY}&language=tr-TR`);
+                    const data = await response.json();
+
+                    if (data.id) {
+                        const baslik = data.title || data.name;
+                        const afis = data.poster_path 
+                            ? `https://image.tmdb.org/t/p/w500${data.poster_path}` 
+                            : 'https://via.placeholder.com/500x750?text=Afiş+Yok';
+                        const puan = data.vote_average ? data.vote_average.toFixed(1) : 'N/A';
+                        const yil = (data.release_date || data.first_air_date || 'N/A').split('-')[0];
+                        
+                        let ozet = data.overview || "Bu yapım için Türkçe özet bulunmuyor.";
+                        if (ozet.length > 80) ozet = ozet.substring(0, 77) + '...';
+
+                        htmlContent += `
+                            <a href="https://www.themoviedb.org/${yapim.tip}/${yapim.id}" target="_blank" class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col text-left cursor-pointer group">
+                                <div class="relative h-64 overflow-hidden">
+                                    <img src="${afis}" alt="${baslik}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                    <div class="absolute top-2 left-2 bg-indigo-600 text-white text-[10px] font-bold px-2 py-1 rounded">
+                                        ${yapim.etiket}
+                                    </div>
+                                    <div class="absolute bottom-2 right-2 bg-black/80 text-amber-400 px-2 py-1 rounded text-xs font-bold">
+                                        ⭐ ${puan}
+                                    </div>
+                                </div>
+                                <div class="p-4 flex flex-col flex-1">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <h3 class="font-bold text-indigo-900 text-sm leading-tight group-hover:text-indigo-600 transition-colors">${baslik}</h3>
+                                    </div>
+                                    <span class="text-gray-400 font-bold text-xs mb-2">${yil}</span>
+                                    <p class="text-gray-500 text-xs">${ozet}</p>
+                                </div>
+                            </a>
+                        `;
+                    }
                 }
-
-                let html = '<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">';
-                
-                data.slice(0, 3).forEach(item => {
-                    const dizi = item.show;
-                    const resimUrl = dizi.image ? dizi.image.medium : 'https://via.placeholder.com/210x295?text=Resim+Yok';
-                    const puan = dizi.rating.average ? dizi.rating.average : 'Bilinmiyor';
-                    const tur = dizi.genres.length > 0 ? dizi.genres.join(', ') : 'Tür Belirtilmemiş';
-
-                    html += `
-                        <div class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-                            <img src="${resimUrl}" alt="${dizi.name}" class="w-full h-64 object-cover">
-                            <div class="p-4 flex flex-col flex-1">
-                                <h3 class="font-bold text-xl text-indigo-900 mb-1">${dizi.name}</h3>
-                                <p class="text-xs text-gray-500 mb-2 font-medium">🏷️ ${tur}</p>
-                                <p class="text-sm text-gray-700 mb-4">⭐ IMDb Puanı: <span class="font-bold">${puan}</span></p>
-                                <a href="${dizi.url}" target="_blank" class="mt-auto bg-indigo-100 text-indigo-700 hover:bg-indigo-600 hover:text-white font-semibold py-2 px-4 rounded text-center transition-colors">
-                                    Detaylı Bilgi
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                });
-                
-                html += '</div>';
-                sonucKutusu.innerHTML = html;
+                container.innerHTML = htmlContent;
 
             } catch (error) {
-                sonucKutusu.innerHTML = '<p class="text-red-500 font-bold">API ile iletişim kurulamadı. Lütfen internet bağlantınızı kontrol edin.</p>';
+                container.innerHTML = `<div class="col-span-full text-center text-red-500 font-bold p-6 bg-red-50 rounded-xl">
+                    Bağlantı Hatası: Lütfen internet bağlantınızı veya TMDB şifrenizi kontrol edin.
+                </div>`;
             }
         }
 
-        document.getElementById('diziAramaInput').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                diziGetir();
-            }
-        });
+        window.onload = listeyiOlustur;
     </script>
-
 </body>
 </html>

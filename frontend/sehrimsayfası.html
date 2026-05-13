@@ -3,103 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şehrim: Mardin - Şevval Gökçen</title>
-    
+    <title>Şehrim - Şevval Gökçen</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-amber-50 text-slate-800 font-sans">
+<body class="bg-amber-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
-    
-    <header class="bg-amber-700 text-white py-6 shadow-lg border-b-4 border-amber-900">
-        
-        <div class="max-w-5xl mx-auto px-4 w-full flex justify-center md:justify-end mb-6">
-            <nav>
-                <ul class="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 font-medium text-sm md:text-base">
-                    <li><a href="giris.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">Hakkımda</a></li>
-                    <li><a href="cv.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">CV</a></li>
-                    <li><a href="sehrimsayfası.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">Şehrim</a></li>
-                    <li><a href="kulturelmiras.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">Mirasımız</a></li>
-                    <li><a href="ilgi-alanlarim.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">İlgi Alanlarım</a></li>
-                    <li><a href="iletisim.html" class="hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200">İletişim</a></li>
-                    <li><a href="login.html" class="hover:text-indigo-300 transition duration-300 border-b-2 border-transparent hover:border-indigo-300">Giriş Yap</a></li>
+    <header class="bg-amber-700 text-white shadow-lg border-b-4 border-amber-900 relative z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+            
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl font-bold text-amber-100">Büyülü Şehir: MARDİN</h1>
+                <p class="text-sm mt-1 text-amber-200">Taşın Şiire Dönüştüğü Yer</p>
+            </div>
+
+            <button id="menuButonu" class="md:hidden block text-white hover:text-amber-200 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <nav id="anaMenu" class="hidden md:block absolute md:static top-full left-0 w-full md:w-auto bg-amber-800 md:bg-transparent shadow-xl md:shadow-none pb-4 md:pb-0 z-50">
+                <ul class="flex flex-col md:flex-row items-center gap-4 md:gap-6 font-medium text-sm md:text-base pt-4 md:pt-0">
+                    <li><a href="giris.html" class="text-amber-100 hover:text-white transition duration-300 border-b-2 border-transparent hover:border-white">Hakkımda</a></li>
+                    <li><a href="cv.html" class="text-amber-100 hover:text-white transition duration-300 border-b-2 border-transparent hover:border-white">CV</a></li>
+                    <li><a href="sehrimsayfası.html" class="text-white hover:text-amber-200 transition duration-300 border-b-2 border-transparent hover:border-amber-200 font-bold">Şehrim</a></li>
+                    <li><a href="kulturelmiras.html" class="text-amber-100 hover:text-white transition duration-300 border-b-2 border-transparent hover:border-white">Mirasımız</a></li>
+                    <li><a href="ilgi-alanlarim.html" class="text-amber-100 hover:text-white transition duration-300 border-b-2 border-transparent hover:border-white">İlgi Alanlarım</a></li>
+                    <li><a href="iletisim.html" class="text-amber-100 hover:text-white transition duration-300 border-b-2 border-transparent hover:border-white">İletişim</a></li>
+                    <li><a href="login.html" class="text-amber-100 hover:text-white transition duration-300 border-b-2 border-transparent hover:border-white">Giriş Yap</a></li>
                 </ul>
             </nav>
         </div>
-
-        <div class="text-center pb-4">
-            <h1 class="text-4xl font-bold tracking-wider">Büyülü Şehir: MARDİN</h1>
-            <p class="text-xl mt-2 font-light">Taşın Şiire Dönüştüğü Yer</p>
-        </div>
     </header>
 
-    <main class="max-w-5xl mx-auto my-10 px-4">
+    <main class="max-w-5xl mx-auto my-10 px-4 flex-grow">
         
         <section class="bg-white p-8 rounded-2xl shadow-md border border-amber-100 mb-10 flex flex-col md:flex-row gap-8 items-center">
             <div class="flex-1">
                 <h2 class="text-3xl font-bold text-amber-800 mb-4">Mardin Hakkında</h2>
                 <p class="text-lg leading-relaxed text-slate-700 mb-4">
-                    Güneydoğu Anadolu Bölgesi'nin en büyüleyici şehirlerinden biri olan Mardin, farklı dinlerin ve dillerin yüzyıllardır barış içinde bir arada yaşadığı eşsiz bir kültür mozaiğidir. Tarihi İpek Yolu üzerinde bulunan şehir, dar sokakları, abbara adı verilen geçitleri ve taş işçiliğinin zirvesi olan tarihi evleri ile bir açık hava müzesini andırır.
+                    Güneydoğu Anadolu Bölgesi'nin en büyüleyici şehirlerinden biri olan Mardin, farklı dinlerin ve dillerin yüzyıllardır barış içinde bir arada yaşadığı kültürel bir mozaiktir.
                 </p>
                 <div class="bg-amber-100 p-4 rounded-lg inline-block">
-                    <span class="font-bold text-amber-900 text-lg">Güncel Nüfus:</span> 
+                    <span class="font-bold text-amber-900 text-lg">Güncel Nüfus:</span>
                     <span class="text-amber-800 text-lg">Yaklaşık 870.000 (2023 verileri)</span>
                 </div>
             </div>
-            <div class="flex-shrink-0">
-
+            <div class="flex-1 text-center">
                 <a href="resimler/mardin-genel.jpg" target="_blank" title="Resmi Büyütmek İçin Tıklayın">
-                    <img src="resimler/mardin-genel.jpg" alt="Mardin Genel Görünüm" class="w-64 h-64 object-cover rounded-full shadow-lg border-4 border-amber-200 hover:opacity-90 transition-opacity cursor-pointer">
+                    <img src="resimler/mardin-genel.jpg" alt="Mardin Genel Görünüm" class="w-64 h-64 object-cover rounded-full shadow-lg border-4 border-amber-200 hover:scale-105 transition-transform duration-300 mx-auto">
                 </a>
             </div>
         </section>
 
         <section class="mb-12">
-            <h2 class="text-3xl font-bold text-center text-amber-800 mb-6">Mardin'den Manzaralar</h2>
-            
+            <h2 class="text-3xl font-bold text-center text-amber-800 mb-8">Mardin'den Manzaralar</h2>
+
             <div class="relative w-full max-w-3xl mx-auto h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white group">
-               
                 <a id="sliderLink" href="resimler/mardin1.jpg" target="_blank" title="Resmi Büyütmek İçin Tıklayın">
-                    <img id="sliderResim" src="resimler/mardin1.jpg" alt="Mardin Manzarası" class="w-full h-full object-cover transition-all duration-500 cursor-pointer">
+                    <img id="sliderImg" src="resimler/mardin1.jpg" alt="Mardin Manzarası" class="w-full h-full object-cover transition-all duration-500">
                 </a>
-                
-                <button onclick="oncekiResim()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-4 rounded-r-xl transition opacity-0 group-hover:opacity-100">
+
+                <button onclick="oncekiResim()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
                 </button>
-    
-                <button onclick="sonrakiResim()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-4 rounded-l-xl transition opacity-0 group-hover:opacity-100">
+
+                <button onclick="sonrakiResim()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
                 </button>
 
-                
                 <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-4 py-1 rounded-full text-sm font-bold tracking-widest">
-                    <span id="sayac">1</span> / 4
+                    GÖRSEL <span id="sayac">1</span> / 4
                 </div>
             </div>
         </section>
 
-      
         <section>
             <h2 class="text-3xl font-bold text-center text-amber-800 mb-8">Mutlaka Gezilecek Yerler</h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden border border-slate-100">
                     <div class="p-6">
                         <h3 class="font-bold text-xl text-amber-900 mb-2">Dara Antik Kenti</h3>
-                        <p class="text-slate-600 text-sm">Mezopotamya'nın Efes'i olarak bilinen bu antik Roma garnizon kenti, devasa su sarnıçları ve kaya mezarlarıyla büyüleyicidir.</p>
+                        <p class="text-slate-600 text-sm">Mezopotamya'nın Efes'i olarak bilinen bu antik Roma garnizon kenti, devasa su sarnıçları ve kaya mezarlarıyla ünlüdür.</p>
                     </div>
                 </article>
 
                 <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden border border-slate-100">
                     <div class="p-6">
                         <h3 class="font-bold text-xl text-amber-900 mb-2">Deyrulzafaran Manastırı</h3>
-                        <p class="text-slate-600 text-sm">Süryani Ortodoks inancının en önemli merkezlerinden biri olan manastır, muazzam mimarisi ve safran çiçeklerinden alan adıyla ünlüdür.</p>
+                        <p class="text-slate-600 text-sm">Süryani Ortodoks inancının en önemli merkezlerinden biri olan manastır, muazzam mimarisi ve safran çiçeklerinden alan adıyla bilinir.</p>
                     </div>
                 </article>
 
                 <article class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow overflow-hidden border border-slate-100">
                     <div class="p-6">
                         <h3 class="font-bold text-xl text-amber-900 mb-2">Kasımiye Medresesi</h3>
-                        <p class="text-slate-600 text-sm">Artuklu mimarisinin başyapıtlarından olan medrese, avlusundaki havuzu ve astronomi çalışmalarıyla dönemin bilim merkezidir.</p>
+                        <p class="text-slate-600 text-sm">Artuklu mimarisinin başyapıtlarından olan medrese, avlusundaki havuzu ve astronomi (ve tıp) bilimi simgeleriyle dikkat çeker.</p>
                     </div>
                 </article>
             </div>
@@ -107,41 +107,43 @@
 
     </main>
 
-   
-    <footer class="bg-amber-900 text-amber-100 text-center py-6 mt-12">
+    <footer class="bg-amber-900 text-amber-100 py-6 mt-10 text-center border-t-4 border-amber-700">
         <p>&copy; 2026 Şevval Gökçen - Web Teknolojileri Projesi</p>
     </footer>
 
-  
     <script>
+        const menuButonu = document.getElementById('menuButonu');
+        const anaMenu = document.getElementById('anaMenu');
 
+        menuButonu.addEventListener('click', () => {
+            anaMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <script>
         const resimler = [
             "resimler/mardin1.jpg",
             "resimler/mardin2.jpg",
             "resimler/mardin3.jpg",
             "resimler/mardin4.jpg"
         ];
-        
-        let aktifSira = 0; 
-        
-        const sliderImg = document.getElementById("sliderResim");
-        const sliderLink = document.getElementById("sliderLink"); 
-        const sayacMetni = document.getElementById("sayac");
 
-     
+        let aktifSira = 0;
+
+        const sliderImg = document.getElementById('sliderImg');
+        const sliderLink = document.getElementById('sliderLink');
+        const sayacMetni = document.getElementById('sayac');
+
         function sonrakiResim() {
             aktifSira++;
-     
             if (aktifSira >= resimler.length) {
                 aktifSira = 0;
             }
             resmiGuncelle();
         }
 
-
         function oncekiResim() {
             aktifSira--;
-  
             if (aktifSira < 0) {
                 aktifSira = resimler.length - 1;
             }
@@ -150,8 +152,8 @@
 
         function resmiGuncelle() {
             sliderImg.src = resimler[aktifSira];
-            sliderLink.href = resimler[aktifSira]; 
-            sayacMetni.innerText = aktifSira + 1; 
+            sliderLink.href = resimler[aktifSira];
+            sayacMetni.innerText = aktifSira + 1;
         }
     </script>
 
